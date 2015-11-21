@@ -1,7 +1,7 @@
 {
   "name": "interview-exercise",
   "version": "1.0.0",
-  "description": "\"A simple app for an exercise\"",
+  "description": "A simple app for an exercise",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
