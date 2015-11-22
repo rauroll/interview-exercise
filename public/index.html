@@ -1,9 +1,30 @@
-<html>
-	<head>
-		<title>KillerApp</title>
+<html ng-app="myApp">
+<head>
+	<title>KillerApp</title>
+	<script src="libs/angular/angular.js"></script>
+	<script src="libs/angular-route/angular-route.js"></script>
+	<script src="libs/jquery/dist/jquery.js"></script>
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
 
-	</head>
-	<body>
-		<h1>Hello!</h1>
-	</body>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Olli Rauramo">
+
+	<base href="/">
+
+	<script src='app.js'></script>
+	<script src='js/controllers/MainCtrl.js'></script>
+
+</head>
+<body>
+	<div class="container">
+		<header>
+			<a href="/">
+				<img src="img/killerapp_logo.png" width="200" alt="KillerApp">
+			</a>
+		</header>
+	</div>
+</body>
 </html>

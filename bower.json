@@ -1,0 +1,10 @@
+{
+  "name": "KillerApp",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "latest",
+    "bootstrap": "latest",
+    "jquery": "~2.1.4"
+  }
+}
