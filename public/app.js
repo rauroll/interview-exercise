@@ -1,9 +1,9 @@
-angular.module('myApp', ['ngRoute']).config(function($routeProvider, $locationProvider) {
+angular.module('myApp', ['MessageService', 'ngRoute']).config(function($routeProvider, $locationProvider) {
 
 	$routeProvider
 
 	.when('/', {
-		templateUrl: 'templates/home',
+		templateUrl: 'templates/home.html',
 		controller: 'MainController'
 	})
 	.otherwise({

@@ -14,17 +14,20 @@
 
 	<base href="/">
 
+	<script src='js/services/MessageService.js'></script>
 	<script src='app.js'></script>
 	<script src='js/controllers/MainCtrl.js'></script>
 
 </head>
 <body>
-	<div class="container">
-		<header>
+	<div class="container-fluid height-full text-center">
+		<div>
 			<a href="/">
-				<img src="img/killerapp_logo.png" width="200" alt="KillerApp">
+				<img class="img-responsive center-block" src="img/killerapp_logo.png" alt="KillerApp">
 			</a>
-		</header>
+		</div>
+
+		<div ng-view></div>
 	</div>
 </body>
 </html>
