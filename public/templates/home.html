@@ -13,9 +13,9 @@
 					</div>
 				</form>
 			</div>
-			<div class="row text-left">
+			<div class="message-container row text-left" scroll-glue-bottom="glued">
 				<div ng-repeat="message in messages track by $index">
-					<div id="message-wrapper">
+					<div class="message-wrapper">
 						<b>{{ message }}</b>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-angular.module('myApp', ['MessageService', 'ngRoute']).config(function($routeProvider, $locationProvider) {
+angular.module('myApp', ['MessageService', 'ngRoute', 'luegg.directives']).config(function($routeProvider, $locationProvider) {
 
 	$routeProvider
 

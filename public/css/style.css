@@ -26,6 +26,19 @@
 
 }
 
+.message-container {
+    overflow-y: scroll;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+}
+
+.message-wrapper {
+    padding: 2px 0 2px 0;
+    word-wrap: break-word;
+
+}
+
 .my-button {
     width: 100px;
     margin-left: 5px;
@@ -36,7 +49,7 @@
 }
 
 #send-button {
-    float: left;
+    float: right;
 }
 
 #fetch-button {
