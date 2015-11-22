@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/rauroll/interview-exercise/issues"
   },
-  "homepage": "https://github.com/rauroll/interview-exercise#readme"
+  "homepage": "https://github.com/rauroll/interview-exercise#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5"
+  }
 }
