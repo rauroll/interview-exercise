@@ -1,4 +1,53 @@
 * {
     outline: 0;
+    font-family: 'Cabin', sans-serif;
 }
 
+.alert {
+    z-index: 100;
+    position: absolute;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0 !important;
+    padding-left:0 !important;
+}
+
+#my-form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#my-text-input {
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #CCC;
+    box-shadow: none;
+
+}
+
+.my-button {
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 0;
+    border: 0;
+    background-color: #f07e14;
+}
+
+#send-button {
+    float: left;
+}
+
+#fetch-button {
+
+}
+
+#my-button:hover {
+
+}
+
+#loading-icon {
+    margin-top: 150px;
+    width: 50px;
+}
