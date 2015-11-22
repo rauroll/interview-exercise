@@ -17,7 +17,9 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.use(express.static(__dirname + '/public'));
 
+var restApi = require('./app/routes/api');
 
+app.use('/messages/', restApi);
 
 app.get('/*', function(req, res) {
 	res.send('index');

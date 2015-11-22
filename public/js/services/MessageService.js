@@ -5,16 +5,17 @@ angular.module('MessageService', []).factory('MessageService',
 
 
 		return ({
-			sendMessage: sendMessage
+			sendMessage: sendMessage,
+			getMessages: getMessages
 		});
 
 		function sendMessage(msg) {
 
 			var deferred = $q.defer();
 
-			$http.post('/send', {message: msg})
+			$http.post('/messages/add', {message: msg})
 				.success(function (data, status) {
-					deferred.resolve(true);			
+					deferred.resolve(data.ok);			
 				})
 				.error(function() {
 					deferred.reject();
@@ -27,7 +28,7 @@ angular.module('MessageService', []).factory('MessageService',
 
 			var deferred = $q.defer();
 
-			$http.get('/messages')
+			$http.get('/messages/list')
 			.success(function(data) {
 				deferred.resolve(data.messages);
 			})
