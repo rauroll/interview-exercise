@@ -9,7 +9,6 @@ router.get('/list', function(req, res) {
 });
 
 router.post('/add', function(req, res) {
-	console.log("Add called, payload: " + req.body.message);
 	messages.push(req.body.message);
 	return res.send({ok: true});
 })

@@ -2,14 +2,14 @@ angular.module('myApp').controller('MainController', ['MessageService', '$scope'
 
 	$scope.messages = ["Fetching..."];
 
+	var socket = io();
 
 	
-	$scope.send = function(message) {
-		MessageService.sendMessage($scope.myForm.message).then(function(data) {
+	$scope.send = function() {
+		var message = $scope.myForm.message
+		MessageService.sendMessage(message).then(function(data) {
+			socket.emit('send', message);
 			$scope.myForm = {};
-			MessageService.getMessages().then(function(data) {
-				$scope.messages = data;
-			});
 		})
 		.catch(function() {
 			$scope.error = true;
@@ -22,14 +22,15 @@ angular.module('myApp').controller('MainController', ['MessageService', '$scope'
 		$scope.loading = true;
 		MessageService.getMessages().then(function(messages) {
 			$scope.loading = false;
-			if (messages.length == 0) {
-				$scope.messages = ["No world saving strings found"];
-			} else {
-				$scope.messages = messages;
-			}
+			$scope.messages = messages;
 		});
 	}
 
+	socket.on('message', function(message) {
+		$scope.messages.push(message);
+		$scope.$apply();
+	});
+
 	$scope.getMessages();
 
-}])
+}]);

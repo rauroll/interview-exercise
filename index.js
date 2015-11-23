@@ -25,7 +25,12 @@ app.get('/*', function(req, res) {
 	res.send('index');
 });
 
-app.listen(port);
+;
+
+
+var messageSocket = require('./app/socket').listen(app.listen(port));
+
 console.log("Listening to port 3000.");
+
 
 exports = module.exports = app;
