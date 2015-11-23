@@ -7,7 +7,7 @@ var path = require('path');
 
 var port = process.env.PORT || 3000;
 
-app.set('views', path.join(__dirname, '/public'));
+// app.set('views', path.join(__dirname, '/public'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.json({type: 'application/vnd.api+json'}));
@@ -22,7 +22,7 @@ var restApi = require('./app/routes/api');
 app.use('/messages/', restApi);
 
 app.get('/*', function(req, res) {
-	res.send('index');
+	res.send('./public/index');
 });
 
 ;
